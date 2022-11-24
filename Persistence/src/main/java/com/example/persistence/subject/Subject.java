@@ -15,10 +15,11 @@ public class Subject {
         this.subjectName=subjectName;
     }
 
-    public int getId() {
-        return id;
-    }
+    public int getId() {return id;}
 
+    public void setId(int id) {
+        this.id = id;
+    }
     public void setSubjectName(String subjectName) {
         this.subjectName = subjectName;
     }

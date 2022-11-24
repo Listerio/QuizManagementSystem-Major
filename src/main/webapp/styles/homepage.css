@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: 0;
+}
+
+header{
+  background-color: aqua;
+  color: white;
+  padding: 10px 0 10px 0 ;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  max-height: 15vh;
+}
+.one {
+  background-color: orange;
+  width: 100vw;
+  height: 70.0vh;
+  text-align: center;
+  font-size: 40px;
+}
+.one h1{
+  color: red;
+  text-transform: capitalize;
+}
+.cover{
+  padding: 70px;
+}
+.hero{
+  padding: 10px;
+  border-radius: 30px;
+  transition: .4s;
+  transition-timing-function: ease-in-out;
+}
+.hero:hover{
+  background-color: rgba(185, 104, 11, 0.192);
+  box-shadow: 10px;
+  box-shadow: black;
+}
+.hero h1{
+  font-size: 40px;
+}
+.btn{
+  width: 100%;
+  margin-bottom: 30px;
+}
+.btn button{
+  text-transform: uppercase;
+  width: 105px;
+  height:40px;
+  box-shadow:aquamarine;
+  background-color: brown;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  transition-timing-function: ease-in-out;
+  transition: 0.65s;
+}
+.btn button:hover{
+  transform: scale(1.2);
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+}
+.inp{
+  padding-left: 10px;
+  border: none;
+  height: 30px;
+  width: 50%;
+  transition: .1s;
+  transition-timing-function: ease-in-out;
+}
+.inp:hover{
+  border-radius: 20px;
+  border-bottom: 2px rgba(6, 79, 173, 0.322) solid;
+  box-shadow: 2px 2px 12px 0.2px;
+}
+footer{
+  width: 100vw;
+  height: 12.2vh;
+  color: white;
+  border: black solid;
+  background-color: black;
+}
+.link
+{
+  text-align: end;
+  text-decoration: underline;
+  font-size: 25px;
+}
+.form
+{
+  width: 60%;
+  margin-left: 20%;
+}

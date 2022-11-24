@@ -11,9 +11,9 @@ import java.util.Scanner;
 
 public class CreateTest {
         Test test;
-       Subject subject;
-       Question question;
-       private List<Question> questionStream;
+        Subject subject;
+        Question question;
+        private List<Question> questionStream;
 
 
 
@@ -21,9 +21,9 @@ public class CreateTest {
        public CreateTest(Subject subject,Test tests){
            question=new DefaultQuestion();
            this.subject=subject;
-            this.question.setSubject(subject);
-            this.test=tests;
-            questionStream=new ArrayList<>();
+           this.question.setSubject(subject);
+           this.test=tests;
+           questionStream=new ArrayList<>();
        }
 
     public List<Question> getQuestionStream() {
@@ -90,10 +90,10 @@ public class CreateTest {
             }
         }
     }
-
     public List<Question> showQuestion(){
            return questionStream;
     }
+
     public static ByteArrayOutputStream serializeQuestions(List<Question> empl) {
         try (var byteArrOutputStream = new ByteArrayOutputStream();
              var oos = new ObjectOutputStream(byteArrOutputStream)) {
@@ -104,7 +104,6 @@ public class CreateTest {
         }
         return null;
     }
-
     public static List<Question> deserializeQuestions(ByteArrayOutputStream inputStream) {
         try (var ois = new ObjectInputStream(new ByteArrayInputStream(inputStream.toByteArray()))) {
             return (List<Question>) ois.readObject();
@@ -113,7 +112,4 @@ public class CreateTest {
         }
         return null;
     }
-
-
-
 }

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ConsoleApp:war">
+    <output-path>$PROJECT_DIR$/ConsoleApp/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ConsoleApp</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ConsoleApp-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ConsoleApp:war exploded" />
+    </root>
+  </artifact>
+</component>
