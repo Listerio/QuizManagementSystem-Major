@@ -15,9 +15,10 @@
         <div class="hero">
             <h1>Login Page</h1>
             <div class="form">
-                <form action="#" method="post">
-                    <input class="inp" type="text" placeholder="User Id">
-                    <input class="inp" type="password" placeholder="Password">
+                <p>${errorContent}</p>
+                <form action="loginS" method="post">
+                    <input class="inp" name="examNum" type="text" placeholder="Exam number">
+                    <input class="inp" name="stdPassword" type="password" placeholder="Password">
                 </form>
             </div>
             <div class="btn">
