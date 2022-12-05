@@ -1,4 +1,4 @@
-package com.example.online_quiz;
+package com.example.online_quiz.Student;
 
 import com.example.persistence.Controller;
 import com.example.persistence.facade.StudentFacade;
@@ -33,22 +33,29 @@ public class loginServlet extends HttpServlet {
 
             if(examNum.isBlank()||password.isBlank()){
                 errorContent="Cannot leave empty spaces";
+                request.setAttribute("examNum",examNum);
+                request.setAttribute("stdPassword",password);
                 errorMessage(response,request,errorContent);
             }
             Student student=facade.getStudent(examNum,password);
+
             if (student==null){
                 errorContent="invalid login parameters";
+                request.setAttribute("examNum",examNum);
+                request.setAttribute("stdPassword",password);
                 errorMessage(response,request,errorContent);
             }
+
             else {
                 controller.setStudent(student);
-                sendToExamPage(request,response,"examPage.jsp");
+                sendToExamPage(request,response,"ExamSelectorPage.jsp");
             }
 
     }
     private  void errorMessage(HttpServletResponse response,HttpServletRequest request,String errorMessage) throws ServletException, IOException {
         request.setAttribute("errorContent",errorMessage);
-        request.getRequestDispatcher("exam.jsp").forward(request,response);
+        request.getRequestDispatcher("StudentRegister.jsp").forward(request,response);
+
     }
     private void sendToExamPage(HttpServletRequest request,HttpServletResponse response,String path) throws ServletException, IOException {
         request.getRequestDispatcher(path).forward(request,response);
