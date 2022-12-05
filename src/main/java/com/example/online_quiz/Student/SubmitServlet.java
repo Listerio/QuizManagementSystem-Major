@@ -32,10 +32,7 @@ public class SubmitServlet extends HttpServlet {
         for (Question q: serving.getQuestions()) {
           String ansCheck=q.getAnswer();
           String stdAns=questionAnswerMap.get(q);
-            System.out.println(stdAns);
-            System.out.println(ansCheck);
-            System.out.println(stdAns.equals(ansCheck));
-          scorrer.isCorrect(stdAns.equals(ansCheck));
+            scorrer.isCorrect(ansCheck.equals(stdAns));
         }
         System.out.println(scorrer.getScore());
         System.out.println(scorrer.getPercentage()+"%");

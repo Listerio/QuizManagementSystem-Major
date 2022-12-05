@@ -34,7 +34,7 @@ public class ExamSetterServlet extends HttpServlet {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        if (questionList==null) {
+        if (questionList==null||questionList.size()==0) {
             test = new DefaultTest(10);
             createTest = CreateTest.getInstance(controller.getTeacher().getSubject());
             createTest.setTest(test);
@@ -49,6 +49,7 @@ public class ExamSetterServlet extends HttpServlet {
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
+            request.getRequestDispatcher("NewExam.jsp").forward(request,response);
         }
 
     }

@@ -46,17 +46,11 @@ public class NewExamServlet extends HttpServlet {
         counter++;
         System.out.println(counter);
 
-        if (answer.equals("option1")){
-            answer=option1;
-        }
-        else if (answer.equals("option2")){
-            answer=option2;
-        }
-        else if (answer.equals("option3")){
-            answer=option3;
-        }
-        else if (answer.equals("option4")) {
-            answer=option4;
+        switch (answer) {
+            case "option1" -> answer = option1;
+            case "option2" -> answer = option2;
+            case "option3" -> answer = option3;
+            case "option4" -> answer = option4;
         }
         controller=Controller.getInstance();
         cTest = CreateTest.getInstance(controller.getTeacher().getSubject());
@@ -69,9 +63,7 @@ public class NewExamServlet extends HttpServlet {
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
-            controller=null;
-            cTest=null;
-            response.sendRedirect("LoginTeacher.jsp");
+            response.sendRedirect("logout");
         }
         else {
             cTest.createQuestions(question, option1, option2, option3, option4, answer);
