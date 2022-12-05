@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+section{
+
+    background-color: white;
+}
+.version1{
+    margin-right: 10px;
+    border-radius: 25px;
+    border: 5px black solid;
+    padding: 3px;
+    float: right;
+    width: 25vw;
+    background-color: mediumseagreen;
+}
+.imgContainer{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    height: 50%;
+}
+.profilePic{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    border: 1px solid wheat;
+    border-radius: 50px;
+}
+
+.info{
+    color: white;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.title{
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.content{
+    padding: 10px 10px 0 10px;
+}
+
+.option{
+    margin-top: 20px;
+
+}
+
+.separator{
+    margin-bottom: 10px;
+}
+.btn{
+    margin-top: 10px;
+    text-decoration: none;
+    border: none;
+    width: 100px;
+    border-radius: 24px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+.btn:hover{
+    background-color: red;
+    transform: scale(1.03);
+}
+
+.hr{
+     border: none;
+    border-bottom: 2px black;
+}

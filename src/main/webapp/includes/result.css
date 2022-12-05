@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans",sans-serif;
+}
+
+.container{
+    text-decoration: none;
+    margin: 20px;
+    padding: 20px;
+    background-color: mediumseagreen;
+}
+
+.text-container{
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+.buttonsContainer{
+    text-align: center;
+}
+form{
+    display: inline-block;
+}
+button{
+    margin-top: 20px;
+    border-radius: 8px;
+    width: 140px;
+    height: 34px;
+    background-color: black;
+    color: white;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+}
+button:hover{
+    opacity: 1;
+    transform:scale(1.03);
+    color: purple;
+}
+
+
+
+
+
